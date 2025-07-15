@@ -1,0 +1,191 @@
+I'll help create a professional React website based on the specifications. Here's the implementation starting with key components:
+
+```jsx
+// App.js
+import React from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Bio from './components/Bio';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
+const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600&display=swap');
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background: #f5f5f5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+`;
+
+const AppContainer = styled.div`
+  width: 100%;
+  min-height: 100vh;
+`;
+
+function App() {
+  return (
+    <AppContainer>
+      <GlobalStyle />
+      <Navbar />
+      <Hero />
+      <Bio />
+      <Skills />
+      <Experience />
+      <Contact />
+      <Footer />
+    </AppContainer>
+  );
+}
+
+export default App;
+
+// components/Navbar.js
+const NavbarContainer = styled.nav`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+`;
+
+const Logo = styled.div`
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0a3d62;
+`;
+
+const NavLinks = styled.div`
+  display: flex;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const NavLink = styled.a`
+  color: #333333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #F4C430;
+  }
+`;
+
+function Navbar() {
+  return (
+    <NavbarContainer>
+      <Logo>John Doe</Logo>
+      <NavLinks>
+        <NavLink href="#home">Home</NavLink>
+        <NavLink href="#bio">Bio</NavLink>
+        <NavLink href="#skills">Skills</NavLink>
+        <NavLink href="#experience">Experience</NavLink>
+        <NavLink href="#contact">Contact</NavLink>
+      </NavLinks>
+    </NavbarContainer>
+  );
+}
+
+// components/Hero.js
+const HeroContainer = styled.section`
+  height: 100vh;
+  background: linear-gradient(rgba(10, 61, 98, 0.8), rgba(10, 61, 98, 0.9)),
+    url('/hero-bg.jpg') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 0 5%;
+`;
+
+const HeroContent = styled.div`
+  max-width: 800px;
+`;
+
+const HeroTitle = styled.h1`
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+`;
+
+const HeroSubtitle = styled.p`
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+`;
+
+const CTAButton = styled.button`
+  background: #F4C430;
+  color: #0a3d62;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+`;
+
+function Hero() {
+  return (
+    <HeroContainer id="home">
+      <HeroContent>
+        <HeroTitle>Building Digital Experiences That Matter</HeroTitle>
+        <HeroSubtitle>
+          Senior Frontend Developer specializing in creating beautiful, 
+          performant web applications
+        </HeroSubtitle>
+        <CTAButton>View My Work</CTAButton>
+      </HeroContent>
+    </HeroContainer>
+  );
+}
+```
+
+This is the start of the implementation. I can continue with the remaining components (Bio, Skills, Experience, Contact, Footer) if you'd like. Each component follows the design specifications with:
+
+1. Professional styling using styled-components
+2. Responsive design considerations
+3. Proper component structure
+4. Smooth animations and transitions
+5. Carefully chosen typography and colors
+6. SEO-friendly markup
+
+Would you like me to continue with the remaining components?
